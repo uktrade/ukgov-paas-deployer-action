@@ -7,12 +7,14 @@ registration_url="https://github.com/${GITHUB_OWNER}"
 #     registration_url="${registration_url}/${GITHUB_REPOSITORY}"
 # fi
 #
-# echo "Requesting token at '${token_url}'"
-#
-# payload=$(curl -sX POST -H "Authorization: token ${GITHUB_PAT}" ${token_url})
-# export RUNNER_TOKEN=$(echo $payload | jq .token --raw-output)
 
+token_url="https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPOSITORY}/actions/runners/registration-token"
+registration_url="${registration_url}/${GITHUB_REPOSITORY}"
 
+echo "Requesting token at '${token_url}'"
+
+payload=$(curl -sX POST -H "Authorization: token ${GITHUB_PAT}" ${token_url})
+export RUNNER_TOKEN=$(echo $payload | jq .token --raw-output)
 
 ./config.sh \
     --name $(hostname) \

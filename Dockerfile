@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ENV PACKAGES "unzip curl git sudo bash jq wget gnupg2 python3.7 python3-distutils python3-pip"
+ENV PACKAGES "unzip curl git sudo bash jq wget iputils-ping gnupg2 python3.7 python3-distutils python3-pip"
 ENV CF_CLI_VERSION "6.47.2"
 ENV PIP_PACKAGES "hvac python-dotenv requests cloudfoundry-client django-environ"
 ENV CF_AUTOPILOT_VERSION="0.0.4"
@@ -10,7 +10,7 @@ ENV GITHUB_PAT ""
 ENV GITHUB_OWNER ""
 ENV GITHUB_REPOSITORY ""
 ENV RUNNER_WORKDIR "_work"
-ENV RUNNER_LABELS "paas"
+ENV RUNNER_LABELS ""
 
 RUN apt-get update \
     && apt-get install -y $PACKAGES \
