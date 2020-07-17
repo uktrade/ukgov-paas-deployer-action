@@ -8,8 +8,10 @@ registration_url="https://github.com/${GITHUB_OWNER}"
 # fi
 #
 
-token_url="https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPOSITORY}/actions/runners/registration-token"
-registration_url="${registration_url}/${GITHUB_REPOSITORY}"
+#token_url="https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPOSITORY}/actions/runners/registration-token"
+#registration_url="${registration_url}/${GITHUB_REPOSITORY}"
+
+token_url="https://api.github.com/orgs/${GITHUB_OWNER}/actions/runners/registration-token"
 
 echo "Requesting token at '${token_url}'"
 

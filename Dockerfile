@@ -4,7 +4,7 @@ ENV PACKAGES "unzip curl git sudo bash jq wget iputils-ping gnupg2 python3.7 pyt
 ENV CF_CLI_VERSION "6.47.2"
 ENV PIP_PACKAGES "hvac python-dotenv requests cloudfoundry-client django-environ"
 ENV CF_AUTOPILOT_VERSION="0.0.4"
-ENV GITHUB_RUNNER_VERSION="2.263.0"
+ENV GITHUB_RUNNER_VERSION="2.267.1"
 ENV RUNNER_NAME "runner"
 ENV GITHUB_PAT ""
 ENV GITHUB_OWNER ""
